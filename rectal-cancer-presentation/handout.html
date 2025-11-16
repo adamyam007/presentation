@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectal Cancer - Clinical Handout</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 10mm;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 18pt;
+            margin-bottom: 5mm;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 2mm;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 14pt;
+            margin-top: 5mm;
+            margin-bottom: 3mm;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h3 {
+            color: #3498db;
+            font-size: 11pt;
+            margin-top: 3mm;
+            margin-bottom: 2mm;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3mm 0;
+            font-size: 9pt;
+        }
+
+        th {
+            background: #2c3e50;
+            color: white;
+            padding: 2mm;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 2mm;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .two-column {
+            column-count: 2;
+            column-gap: 5mm;
+        }
+
+        .box {
+            border: 2px solid #3498db;
+            background: #e8f4f8;
+            padding: 3mm;
+            margin: 3mm 0;
+            border-radius: 2mm;
+        }
+
+        .pearl {
+            border-left: 4px solid #27ae60;
+            background: #f0f8f0;
+            padding: 2mm 3mm;
+            margin: 2mm 0;
+            font-style: italic;
+        }
+
+        ul {
+            margin: 2mm 0;
+            padding-left: 5mm;
+        }
+
+        li {
+            margin: 1mm 0;
+        }
+
+        .flowchart {
+            font-family: monospace;
+            font-size: 8pt;
+            background: #f8f9fa;
+            padding: 3mm;
+            border: 1px solid #ddd;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        .footer {
+            margin-top: 10mm;
+            padding-top: 3mm;
+            border-top: 1px solid #ccc;
+            font-size: 8pt;
+            text-align: center;
+            color: #777;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            .page-break {
+                page-break-after: always;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .print-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12pt;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print Handout</button>
+
+    <h1>Rectal Cancer — Clinical Reference Handout</h1>
+    <p><em>Quick reference guide for residents and medical students</em></p>
+
+    <div class="box">
+        <strong>KEY PILLARS:</strong> MDT Planning • High-Quality MRI • TME with Negative CRM • Neoadjuvant Therapy for Locally Advanced Disease
+    </div>
+
+    <h2>1. Quick Facts & Epidemiology</h2>
+    <div class="two-column">
+        <div>
+            <ul>
+                <li><strong>Global burden:</strong> ~700,000 deaths/year from CRC</li>
+                <li><strong>Rectal cancers:</strong> 30-40% of CRC cases</li>
+                <li><strong>Rising incidence:</strong> in adults &lt;50 years</li>
+                <li><strong>Median age:</strong> 60-72 years</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><strong>5-year survival:</strong>
+                    <ul>
+                        <li>Stage I: 85-95%</li>
+                        <li>Stage II: 60-80%</li>
+                        <li>Stage III: 40-70%</li>
+                        <li>Stage IV: 10-20%</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>2. Rectal Anatomy</h2>
+    <h3>Segments (from anal verge)</h3>
+    <ul>
+        <li><strong>Lower rectum:</strong> 0-5 cm — high APR risk</li>
+        <li><strong>Mid rectum:</strong> 5-10 cm — most common site</li>
+        <li><strong>Upper rectum:</strong> 10-15 cm — partly intraperitoneal</li>
+    </ul>
+
+    <h3>Vascular Drainage (Metastasis Routes)</h3>
+    <ul>
+        <li><strong>Superior rectal vein:</strong> → Portal system → Liver</li>
+        <li><strong>Middle/inferior rectal veins:</strong> → Systemic → Lungs</li>
+    </ul>
+
+    <h2>3. TNM Staging (8th Edition)</h2>
+    <table>
+        <tr>
+            <th>Stage</th>
+            <th>T</th>
+            <th>N</th>
+            <th>M</th>
+        </tr>
+        <tr><td><strong>I</strong></td><td>T1-T2</td><td>N0</td><td>M0</td></tr>
+        <tr><td><strong>II</strong></td><td>T3-T4</td><td>N0</td><td>M0</td></tr>
+        <tr><td><strong>III</strong></td><td>Any T</td><td>N1-N2</td><td>M0</td></tr>
+        <tr><td><strong>IV</strong></td><td>Any T</td><td>Any N</td><td>M1</td></tr>
+    </table>
+
+    <h3>T Stage Details</h3>
+    <ul>
+        <li><strong>T1:</strong> Submucosa</li>
+        <li><strong>T2:</strong> Muscularis propria</li>
+        <li><strong>T3:</strong> Through muscularis into perirectal tissue (subclassify by mm)</li>
+        <li><strong>T4a:</strong> Visceral peritoneum</li>
+        <li><strong>T4b:</strong> Adjacent organs</li>
+    </ul>
+
+    <h2>4. Diagnostic Workup</h2>
+    <table>
+        <tr>
+            <th>Test</th>
+            <th>Purpose</th>
+            <th>Key Findings</th>
+        </tr>
+        <tr>
+            <td><strong>DRE</strong></td>
+            <td>Clinical assessment</td>
+            <td>Location, fixation, distance from anal verge</td>
+        </tr>
+        <tr>
+            <td><strong>Colonoscopy</strong></td>
+            <td>Diagnosis, biopsy</td>
+            <td>Histology, synchronous lesions, MSI testing</td>
+        </tr>
+        <tr>
+            <td><strong>Pelvic MRI</strong></td>
+            <td>Local staging</td>
+            <td>T/N stage, CRM (≤1mm = positive), EMVI</td>
+        </tr>
+        <tr>
+            <td><strong>CT TAP</strong></td>
+            <td>Systemic staging</td>
+            <td>Liver, lung, peritoneal metastases</td>
+        </tr>
+        <tr>
+            <td><strong>CEA</strong></td>
+            <td>Baseline, surveillance</td>
+            <td>Prognostic, not diagnostic</td>
+        </tr>
+    </table>
+
+    <div class="pearl">
+        💡 MRI is CORNERSTONE of local staging — CRM status determines neoadjuvant therapy need
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>5. Treatment Algorithm</h2>
+    <table>
+        <tr>
+            <th>Clinical Scenario</th>
+            <th>Treatment Approach</th>
+        </tr>
+        <tr>
+            <td><strong>T1 low-risk, N0</strong><br>(well-diff, no LVI, &lt;3cm, Sm1)</td>
+            <td>Local excision (TEM/TAMIS)</td>
+        </tr>
+        <tr>
+            <td><strong>T1 high-risk or T2, N0</strong></td>
+            <td>TME ± adjuvant chemo if high-risk</td>
+        </tr>
+        <tr>
+            <td><strong>T3-T4 or N+</strong></td>
+            <td><strong>Neoadjuvant CRT/TNT</strong> → Restage → <strong>TME</strong> → Adjuvant chemo</td>
+        </tr>
+        <tr>
+            <td><strong>Threatened/positive CRM</strong></td>
+            <td>Neoadjuvant therapy FIRST to downstage</td>
+        </tr>
+        <tr>
+            <td><strong>Low tumor (sphincter risk)</strong></td>
+            <td>Neoadjuvant CRT → Reassess for LAR vs APR</td>
+        </tr>
+        <tr>
+            <td><strong>Complete cCR after CRT</strong></td>
+            <td>Consider watch-and-wait (strict protocol)</td>
+        </tr>
+        <tr>
+            <td><strong>Metastatic (M1)</strong></td>
+            <td>Systemic chemo ± targeted agents ± immunotherapy (MSI-high)</td>
+        </tr>
+    </table>
+
+    <h2>6. Neoadjuvant Therapy</h2>
+    <h3>Radiotherapy Options</h3>
+    <table>
+        <tr>
+            <th>Regimen</th>
+            <th>Dose/Schedule</th>
+            <th>Surgery Timing</th>
+        </tr>
+        <tr>
+            <td><strong>Short-course RT</strong></td>
+            <td>5 × 5 Gy (25 Gy total)</td>
+            <td>Within 1 week OR delay 6-12 weeks (TNT)</td>
+        </tr>
+        <tr>
+            <td><strong>Long-course CRT</strong></td>
+            <td>45-50.4 Gy over 5-6 weeks<br>+ concurrent 5-FU or capecitabine</td>
+            <td>6-12 weeks post-completion</td>
+        </tr>
+    </table>
+
+    <h3>Chemotherapy</h3>
+    <ul>
+        <li><strong>Adjuvant (Stage III, high-risk Stage II):</strong> FOLFOX or CAPOX × 3-6 months</li>
+        <li><strong>Total Neoadjuvant Therapy (TNT):</strong> Chemo + CRT before surgery — improved pCR, compliance</li>
+        <li><strong>Metastatic:</strong> FOLFOX/FOLFIRI/FOLFOXIRI + targeted agents (bevacizumab, cetuximab if RAS WT)</li>
+        <li><strong>MSI-high metastatic:</strong> Immunotherapy (pembrolizumab/nivolumab) superior to chemo</li>
+    </ul>
+
+    <h2>7. Surgery — TME Principles</h2>
+    <div class="box">
+        <strong>Total Mesorectal Excision (TME) = GOLD STANDARD</strong><br>
+        Sharp dissection in embryologic plane between mesorectal and pelvic fascia
+    </div>
+
+    <h3>Surgical Options</h3>
+    <table>
+        <tr>
+            <th>Procedure</th>
+            <th>Indication</th>
+            <th>Key Points</th>
+        </tr>
+        <tr>
+            <td><strong>Low Anterior Resection (LAR)</strong></td>
+            <td>Sphincter preservation possible</td>
+            <td>Coloanal anastomosis; consider diverting ileostomy</td>
+        </tr>
+        <tr>
+            <td><strong>Abdominoperineal Resection (APR)</strong></td>
+            <td>Low tumor, sphincter involvement</td>
+            <td>Permanent colostomy; counseling essential</td>
+        </tr>
+        <tr>
+            <td><strong>TEM/TAMIS</strong></td>
+            <td>T1 favorable lesions</td>
+            <td>Local excision; strict criteria (well-diff, no LVI, Sm1, &lt;3cm)</td>
+        </tr>
+        <tr>
+            <td><strong>Transanal TME (TaTME)</strong></td>
+            <td>Low tumors, selected centers</td>
+            <td>Bottom-up approach; requires expertise</td>
+        </tr>
+    </table>
+
+    <h3>Critical Margins</h3>
+    <ul>
+        <li><strong>CRM (Circumferential):</strong> ≤1 mm = POSITIVE — major predictor of local recurrence</li>
+        <li><strong>Distal margin:</strong> Modern evidence supports ≤1 cm or even millimetric after preop CRT</li>
+    </ul>
+
+    <div class="pearl">
+        💡 TME quality trumps margin measurements. Good TME with 5mm distal margin beats poor TME with 2cm margin.
+    </div>
+
+    <h2>8. Follow-up & Surveillance</h2>
+    <table>
+        <tr>
+            <th>Time Period</th>
+            <th>Clinic + CEA</th>
+            <th>CT TAP</th>
+            <th>Colonoscopy</th>
+        </tr>
+        <tr>
+            <td><strong>Years 0-2</strong></td>
+            <td>Every 3-6 months</td>
+            <td>Annually</td>
+            <td>At 1 year</td>
+        </tr>
+        <tr>
+            <td><strong>Years 3-5</strong></td>
+            <td>Every 6 months</td>
+            <td>Annually</td>
+            <td>At 3 years</td>
+        </tr>
+        <tr>
+            <td><strong>Beyond 5 years</strong></td>
+            <td>Annually or PRN</td>
+            <td>As indicated</td>
+            <td>Every 5 years if normal</td>
+        </tr>
+    </table>
+
+    <h3>Red Flags for Recurrence</h3>
+    <ul>
+        <li>Rising CEA</li>
+        <li>New pelvic pain or bleeding</li>
+        <li>Change in bowel habits</li>
+        <li>Palpable mass on DRE</li>
+        <li>Respiratory or hepatic symptoms</li>
+    </ul>
+
+    <div class="page-break"></div>
+
+    <h2>9. Clinical Pearls for Rounds</h2>
+    <div class="two-column">
+        <div>
+            <h3>Preoperative</h3>
+            <div class="pearl">
+                MRI quality matters — demand rectal protocol with CRM reporting
+            </div>
+            <div class="pearl">
+                Tattoo tumor location endoscopically
+            </div>
+            <div class="pearl">
+                Early stoma counseling if APR likely
+            </div>
+            <div class="pearl">
+                Optimize nutrition; consider supplementation
+            </div>
+        </div>
+        <div>
+            <h3>Intraoperative</h3>
+            <div class="pearl">
+                Aim for negative CRM — no piecemeal excision
+            </div>
+            <div class="pearl">
+                Diverting ileostomy for low coloanal anastomosis
+            </div>
+            <div class="pearl">
+                Intact TME specimen — pathologist assesses quality
+            </div>
+        </div>
+    </div>
+
+    <h3>Postoperative</h3>
+    <div class="pearl">
+        Communicate function outcomes: LAR syndrome risk, sexual/urinary dysfunction
+    </div>
+    <div class="pearl">
+        Review pathology at MDT — confirm ypTNM, CRM, adjuvant plan
+    </div>
+
+    <h2>10. Prognostic Factors</h2>
+    <div class="two-column">
+        <div>
+            <h3>Favorable</h3>
+            <ul>
+                <li>Early T/N stage</li>
+                <li>Negative CRM</li>
+                <li>No EMVI</li>
+                <li>Well/moderate differentiation</li>
+                <li>MSI-high</li>
+                <li>pCR after neoadjuvant therapy</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Adverse</h3>
+            <ul>
+                <li>Positive CRM (≤1mm)</li>
+                <li>EMVI positive</li>
+                <li>Poor differentiation</li>
+                <li>High nodal burden (N2)</li>
+                <li>Mucinous/signet ring</li>
+                <li>BRAF mutation (sporadic)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>11. MDT Checklist</h2>
+    <div class="flowchart">
+□ DIAGNOSIS
+  ├─ Biopsy-confirmed adenocarcinoma
+  ├─ Grade documented
+  └─ MSI/MMR status (especially if <50 yo)
+
+□ STAGING COMPLETE
+  ├─ MRI: T, N, CRM, EMVI
+  ├─ CT TAP
+  └─ Colonoscopy (synchronous lesions)
+
+□ MDT DECISION
+  ├─ Neoadjuvant therapy? (type, duration)
+  ├─ Surgical approach (LAR vs APR)
+  ├─ Adjuvant therapy plan
+  └─ Organ preservation consideration
+
+□ POST-OP PATHOLOGY
+  ├─ ypTNM
+  ├─ CRM status
+  ├─ TRG (tumor regression grade)
+  ├─ TME quality
+  └─ Adjuvant therapy decision
+    </div>
+
+    <h2>12. Key References</h2>
+    <ul>
+        <li><strong>NCCN Guidelines:</strong> Rectal Cancer (latest version)</li>
+        <li><strong>ESMO Clinical Practice Guidelines:</strong> Rectal Cancer</li>
+        <li><strong>Key Trials:</strong> MERCURY, RAPIDO, OPRA, PRODIGE-23</li>
+    </ul>
+
+    <div class="box" style="margin-top: 10mm;">
+        <h3 style="margin-top: 0;">TAKE-HOME MESSAGES</h3>
+        <ol style="font-weight: bold;">
+            <li>Rectal cancer management requires <strong>MDT planning</strong></li>
+            <li><strong>MRI</strong> is cornerstone for local staging and operative planning</li>
+            <li><strong>TME with negative CRM</strong> is essential for local control</li>
+            <li><strong>Neoadjuvant therapy</strong> is standard in T3-T4 or N+ disease</li>
+            <li>Consider <strong>organ preservation</strong> only in strict protocols</li>
+            <li><strong>Molecular profiling</strong> matters for metastatic disease</li>
+            <li><strong>Surveillance</strong> detects treatable recurrences early</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        Rectal Cancer Clinical Reference • For educational purposes • Based on NCCN/ESMO guidelines 2024-2025
+    </div>
+
+</body>
+</html>

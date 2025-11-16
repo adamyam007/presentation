@@ -1,0 +1,109 @@
+/* Custom CSS for Rectal Cancer Presentation */
+
+/* Print-friendly styles */
+@media print {
+    .controls-hint {
+        display: none;
+    }
+
+    .reveal .slides section {
+        page-break-after: always;
+    }
+}
+
+/* Custom scrollbar for overflowing content */
+.flowchart::-webkit-scrollbar {
+    width: 8px;
+}
+
+.flowchart::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.flowchart::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.flowchart::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Smooth transitions for canvas elements */
+.canvas-container canvas {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.6em;
+    }
+
+    .two-column, .three-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hover effects for interactive elements */
+.stage-badge {
+    transition: transform 0.2s ease;
+    cursor: default;
+}
+
+.stage-badge:hover {
+    transform: scale(1.1);
+}
+
+/* Print version */
+@page {
+    size: landscape;
+    margin: 1cm;
+}
+
+/* Animation for section dividers */
+.section-divider {
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Highlight animation for key concepts */
+.key-concept {
+    animation: pulse 2s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px 5px rgba(102, 126, 234, 0.6);
+    }
+}
+
+/* Clinical pearl styling enhancement */
+.clinical-pearl::before {
+    content: "💡 ";
+    font-size: 1.2em;
+}
+
+/* Enhance readability */
+.reveal section {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Speaker notes styling */
+.reveal aside.notes {
+    font-size: 1em;
+    line-height: 1.6;
+}

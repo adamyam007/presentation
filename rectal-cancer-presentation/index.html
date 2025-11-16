@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectal Cancer — Complete 3D Lecture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: var(--primary-color);
+            text-transform: none;
+        }
+
+        .reveal h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+        .reveal h2 { font-size: 1.8em; margin-bottom: 0.4em; border-bottom: 3px solid var(--accent-color); padding-bottom: 0.3em; }
+        .reveal h3 { font-size: 1.4em; margin-bottom: 0.3em; color: var(--secondary-color); }
+
+        .reveal ul, .reveal ol {
+            font-size: 0.85em;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .reveal li {
+            margin: 0.5em 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            align-items: start;
+        }
+
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5em;
+            align-items: start;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 5px solid var(--accent-color);
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+        }
+
+        .clinical-pearl {
+            background: #e8f4f8;
+            border-left: 5px solid var(--secondary-color);
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        table {
+            font-size: 0.75em;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8em;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 0.6em;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .canvas-container {
+            width: 100%;
+            height: 500px;
+            margin: 1em auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #000;
+        }
+
+        .small-canvas {
+            height: 400px;
+        }
+
+        .flowchart {
+            font-size: 0.7em;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 1.5em;
+            border-radius: 10px;
+            font-family: monospace;
+            line-height: 1.8;
+        }
+
+        .stage-badge {
+            display: inline-block;
+            padding: 0.3em 0.8em;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 0.2em;
+        }
+
+        .stage-1 { background: #27ae60; }
+        .stage-2 { background: #f39c12; }
+        .stage-3 { background: #e67e22; }
+        .stage-4 { background: #c0392b; }
+
+        .survival-bar {
+            height: 30px;
+            background: linear-gradient(to right, #27ae60, #f39c12, #e67e22, #c0392b);
+            border-radius: 15px;
+            margin: 0.5em 0;
+            position: relative;
+        }
+
+        .key-concept {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5em;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 1em 0;
+        }
+
+        .anatomy-label {
+            font-size: 0.75em;
+            background: rgba(255,255,255,0.9);
+            padding: 0.3em 0.6em;
+            border-radius: 3px;
+            border: 1px solid #333;
+        }
+
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            margin: 2em 0;
+        }
+
+        .controls-hint {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.6em;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1 style="color: white; font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Rectal Cancer</h1>
+                <h2 style="color: white; font-weight: normal;">Complete 3D Lecture</h2>
+                <p style="color: white; margin-top: 2em; font-size: 0.9em;">
+                    Epidemiology • Anatomy • Biology • Diagnosis<br>
+                    Staging • Management • Follow-up
+                </p>
+                <p style="color: white; margin-top: 2em; font-size: 0.8em; font-style: italic;">
+                    A structured, actionable framework for clinical decision-making
+                </p>
+            </section>
+
+            <!-- SECTION A: Introduction & Epidemiology -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section A</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Introduction & Epidemiology</h2>
+                </section>
+
+                <!-- Slide 2: Key Statistics -->
+                <section>
+                    <h2>Key Statistics</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Global Burden</h3>
+                            <ul>
+                                <li><strong>~700,000 deaths/year</strong> from colorectal cancer</li>
+                                <li>Rectal cancers: <strong>30–40%</strong> of all colorectal cases</li>
+                                <li>Incidence <strong>rising in adults &lt;50</strong> in high-income countries</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Clinical Outcomes</h3>
+                            <ul>
+                                <li>Median age at diagnosis: <strong>60–72 years</strong></li>
+                                <li>5-year survival: <strong>stage-dependent</strong></li>
+                                <li>Stage I: ~<strong>90%</strong></li>
+                                <li>Stage IV: &lt;<strong>15%</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box" style="margin-top: 1em;">
+                        <strong>Key Point:</strong> Early detection and stage determine prognosis
+                    </div>
+                </section>
+
+                <!-- Slide 3: Risk Factors -->
+                <section>
+                    <h2>Risk Factors</h2>
+                    <div class="three-column">
+                        <div>
+                            <h3 style="color: #c0392b;">Non-modifiable</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Age</li>
+                                <li>Family history</li>
+                                <li><strong>Lynch syndrome</strong> (HNPCC)</li>
+                                <li><strong>FAP</strong></li>
+                                <li>Prior colorectal neoplasia</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #27ae60;">Modifiable</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Diet: high red/processed meat</li>
+                                <li>Obesity</li>
+                                <li>Physical inactivity</li>
+                                <li>Smoking</li>
+                                <li>Heavy alcohol</li>
+                                <li>IBD (UC &gt; Crohn's)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #3498db;">Molecular</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li><strong>MSI-high</strong> (Lynch)</li>
+                                <li>Different natural history</li>
+                                <li>Therapeutic implications</li>
+                                <li>Immunotherapy response</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clinical-pearl">
+                        Screen high-risk patients earlier. MSI testing informs both prognosis and therapy.
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION B: Rectal Anatomy -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section B</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Rectal Anatomy</h2>
+                </section>
+
+                <!-- Slide 4: Segments -->
+                <section>
+                    <h2>Rectal Segments</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Clinical Division</h3>
+                            <ul>
+                                <li><strong>Rectum length:</strong> 12–15 cm from anal verge</li>
+                                <li><strong>Lower rectum:</strong> 0–5 cm</li>
+                                <li><strong>Mid rectum:</strong> 5–10 cm</li>
+                                <li><strong>Upper rectum:</strong> 10–15 cm</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <strong>Surgical Relevance:</strong><br>
+                                • Sphincter preservation likelihood<br>
+                                • Approach selection (LAR vs APR)
+                            </div>
+                        </div>
+                        <div>
+                            <div id="rectumSegments" class="canvas-container small-canvas"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 5: Anatomical Relations -->
+                <section>
+                    <h2>Anatomical Relations</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Relations</h3>
+                            <ul>
+                                <li><strong>Anterior:</strong>
+                                    <ul>
+                                        <li>Men: prostate, seminal vesicles</li>
+                                        <li>Women: vagina, uterus</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Posterior:</strong> presacral fascia, sacrum</li>
+                                <li><strong>Lateral:</strong> pelvic sidewalls, neurovascular bundles</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Peritoneal Coverage</h3>
+                            <ul>
+                                <li><strong>Upper rectum:</strong> partly intraperitoneal</li>
+                                <li><strong>Mid/low:</strong> extraperitoneal</li>
+                            </ul>
+                            <div class="clinical-pearl">
+                                Peritoneal reflection affects recurrence patterns and surgical approach
+                            </div>
+                        </div>
+                    </div>
+                    <div id="anatomyRelations" class="canvas-container small-canvas"></div>
+                </section>
+
+                <!-- Slide 6: Vascularization -->
+                <section>
+                    <h2>Vascularization</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Arterial Supply</h3>
+                            <ul>
+                                <li><strong>Superior rectal artery</strong>
+                                    <ul><li>Terminal branch of IMA</li>
+                                    <li>Main supply to upper rectum</li></ul>
+                                </li>
+                                <li><strong>Middle rectal arteries</strong>
+                                    <ul><li>From internal iliac</li>
+                                    <li>Variable, supply mid rectum</li></ul>
+                                </li>
+                                <li><strong>Inferior rectal arteries</strong>
+                                    <ul><li>From internal pudendal</li>
+                                    <li>Supply anal canal and distal rectum</li></ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Venous Drainage</h3>
+                            <ul>
+                                <li><strong>Superior rectal vein</strong> → IMV → portal system
+                                    <ul><li style="color: #e74c3c;">⚠ Liver metastasis risk</li></ul>
+                                </li>
+                                <li><strong>Middle/inferior rectal veins</strong> → internal iliac → systemic
+                                    <ul><li style="color: #e74c3c;">⚠ Lung metastasis pathway</li></ul>
+                                </li>
+                            </ul>
+                            <div class="highlight-box">
+                                Dual venous drainage explains metastatic patterns
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 7: Lymphatic Drainage -->
+                <section>
+                    <h2>Lymphatic Drainage</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Primary Pathways</h3>
+                            <ul>
+                                <li>Pararectal nodes</li>
+                                <li>↓</li>
+                                <li>Superior rectal nodes</li>
+                                <li>↓</li>
+                                <li>Inferior mesenteric nodes</li>
+                            </ul>
+                            <div style="margin-top: 1em; padding: 1em; background: #fff3cd; border-radius: 5px;">
+                                <strong>Lateral Pathway:</strong><br>
+                                Internal iliac nodes — more relevant for low rectal tumors
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Clinical Relevance</h3>
+                            <ul>
+                                <li><strong>Nodal status</strong> determines neoadjuvant therapy</li>
+                                <li><strong>TME</strong> removes mesorectal nodes en bloc</li>
+                                <li><strong>Lateral pelvic node dissection:</strong> consider in confirmed metastases (center-dependent)</li>
+                            </ul>
+                            <div class="clinical-pearl">
+                                MRI assessment of lateral nodes guides surgical planning
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION C: Pathophysiology -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section C</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Pathophysiology & Carcinogenesis</h2>
+                </section>
+
+                <!-- Slide 8: Main Pathways -->
+                <section>
+                    <h2>Carcinogenesis Pathways</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Chromosomal Instability</h3>
+                            <div style="background: #f8f9fa; padding: 1em; border-radius: 5px; font-size: 0.8em;">
+                                <strong>Adenoma–Carcinoma Sequence:</strong><br>
+                                Normal mucosa<br>
+                                ↓ <em>APC mutation</em><br>
+                                Aberrant crypt foci<br>
+                                ↓ <em>KRAS mutation</em><br>
+                                Adenoma<br>
+                                ↓ <em>p53 mutation</em><br>
+                                Carcinoma
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Microsatellite Instability (MSI)</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>Mismatch repair deficiency</strong></li>
+                                <li>Lynch syndrome (germline)</li>
+                                <li>Sporadic (MLH1 hypermethylation)</li>
+                                <li><strong>~15%</strong> of colorectal cancers</li>
+                                <li><strong>Better prognosis</strong></li>
+                                <li><strong>Immunotherapy response</strong></li>
+                            </ul>
+                            <h3 style="margin-top: 0.5em;">CIMP Pathway</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li>CpG island methylation</li>
+                                <li>Associated with BRAF mutations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="key-concept">
+                        Clinical Implication: MSI-high tumors respond differently to chemo and immunotherapy
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION D: Clinical Presentation -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section D</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Clinical Presentation</h2>
+                </section>
+
+                <!-- Slide 9: Functional Signs -->
+                <section>
+                    <h2>Early Symptoms</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Common Presentations</h3>
+                            <ul>
+                                <li><strong>Rectal bleeding</strong> (most common)</li>
+                                <li>Change in bowel habits</li>
+                                <li>Tenesmus and urgency</li>
+                                <li>Mucus discharge</li>
+                                <li>Incomplete evacuation feeling</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="highlight-box">
+                                <strong>⚠ Red Flags:</strong><br>
+                                • Bleeding + change in bowel habits<br>
+                                • Age &gt;50 with new symptoms<br>
+                                • Family history + symptoms<br>
+                                • Iron-deficiency anemia
+                            </div>
+                            <div class="clinical-pearl" style="margin-top: 1em;">
+                                Do NOT attribute rectal bleeding to hemorrhoids without examination
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 10: Advanced Symptoms -->
+                <section>
+                    <h2>Advanced Symptoms</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Local Disease</h3>
+                            <ul>
+                                <li><strong>Pelvic/rectal pain</strong></li>
+                                <li>Palpable mass on DRE</li>
+                                <li>Obstructive symptoms</li>
+                                <li>Fistula or incontinence</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Systemic Disease</h3>
+                            <ul>
+                                <li><strong>Constitutional:</strong> weight loss, fatigue</li>
+                                <li><strong>Anemia:</strong> iron deficiency</li>
+                                <li><strong>Metastatic:</strong> hepatomegaly, dyspnea, bone pain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 11: Complications -->
+                <section>
+                    <h2>Complications</h2>
+                    <div class="three-column">
+                        <div>
+                            <h3 style="color: #c0392b;">Obstruction</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Cramping pain</li>
+                                <li>Distension</li>
+                                <li>Constipation</li>
+                                <li>Vomiting (late)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #c0392b;">Perforation</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Peritonitis</li>
+                                <li>Sepsis</li>
+                                <li>Emergency surgery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #c0392b;">Invasion</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Fistula (bladder, vagina)</li>
+                                <li>Pelvic organs</li>
+                                <li>Distant metastases</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box" style="margin-top: 1em;">
+                        <strong>Emergency presentations require urgent stabilization before definitive staging</strong>
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION E: Diagnostic Workup -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section E</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Diagnostic Workup</h2>
+                </section>
+
+                <!-- Slide 12: Initial Assessment -->
+                <section>
+                    <h2>Initial Clinical Assessment</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>History</h3>
+                            <ul>
+                                <li>Symptom timeline</li>
+                                <li>Risk factor screening</li>
+                                <li>Family history</li>
+                                <li>Prior colonoscopies</li>
+                            </ul>
+                            <h3>Physical Exam</h3>
+                            <ul>
+                                <li>General: weight, vital signs</li>
+                                <li>Abdomen: mass, hepatomegaly</li>
+                                <li><strong>Digital rectal exam (DRE)</strong></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Baseline Labs</h3>
+                            <ul>
+                                <li><strong>CBC:</strong> anemia</li>
+                                <li><strong>Electrolytes</strong></li>
+                                <li><strong>Liver function tests</strong></li>
+                                <li><strong>CEA</strong> (baseline for surveillance)</li>
+                                <li>Coagulation if surgery planned</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <strong>CEA:</strong> prognostic marker, not diagnostic. Useful for monitoring.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 13: DRE -->
+                <section>
+                    <h2>Digital Rectal Exam (DRE)</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Technique</h3>
+                            <ol style="font-size: 0.8em;">
+                                <li>Patient positioning (left lateral or lithotomy)</li>
+                                <li>Inspect perianal area</li>
+                                <li>Palpate sphincters (tone)</li>
+                                <li>Sweep circumferentially</li>
+                                <li>Assess:
+                                    <ul>
+                                        <li>Location (clock position)</li>
+                                        <li>Size</li>
+                                        <li>Fixation vs mobility</li>
+                                        <li>Distance from anal verge</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h3>Yield</h3>
+                            <ul>
+                                <li>Detects <strong>low rectal tumors</strong></li>
+                                <li>Guides urgency of endoscopy</li>
+                                <li>Informs surgical planning (sphincter involvement)</li>
+                            </ul>
+                            <div class="clinical-pearl">
+                                DRE can detect up to 70% of rectal tumors. Never skip it.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 14: Colonoscopy -->
+                <section>
+                    <h2>Colonoscopy</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Gold Standard</h3>
+                            <ul>
+                                <li><strong>Full colonoscopy</strong> with biopsy</li>
+                                <li>Visualize and biopsy tumor</li>
+                                <li>Map synchronous lesions:
+                                    <ul>
+                                        <li>2–5% synchronous CRC</li>
+                                        <li>30% polyps</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Tissue Goals</h3>
+                            <ul>
+                                <li><strong>Histology:</strong> adenocarcinoma, grade</li>
+                                <li><strong>Molecular testing:</strong>
+                                    <ul>
+                                        <li>MSI / MMR status</li>
+                                        <li>KRAS, NRAS (metastatic disease)</li>
+                                        <li>BRAF (prognosis)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="highlight-box">
+                                Tattoo location if tumor difficult to localize on imaging
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 15: Pelvic MRI -->
+                <section>
+                    <h2>Pelvic MRI (High-Resolution)</h2>
+                    <div class="key-concept">
+                        MRI is the CORNERSTONE of local staging and surgical planning
+                    </div>
+                    <div class="two-column">
+                        <div>
+                            <h3>Indication</h3>
+                            <ul>
+                                <li>Staging of <strong>all rectal cancers</strong></li>
+                                <li>T, N, CRM, EMVI assessment</li>
+                            </ul>
+                            <h3>Key Sequences</h3>
+                            <ul>
+                                <li>High-resolution T2-weighted</li>
+                                <li>Multiplanar imaging</li>
+                                <li>Axial, coronal, sagittal oblique</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Essential Report Elements</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>T stage</strong></li>
+                                <li><strong>Nodal status</strong> (N stage)</li>
+                                <li><strong>Distance to mesorectal fascia (CRM)</strong>
+                                    <ul><li>≤1 mm = threatened/positive</li></ul>
+                                </li>
+                                <li><strong>EMVI</strong> (extramural vascular invasion)</li>
+                                <li><strong>Relationship to:</strong>
+                                    <ul>
+                                        <li>Sphincters</li>
+                                        <li>Levators</li>
+                                        <li>Adjacent organs</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Lateral pelvic nodes</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 16: CT TAP -->
+                <section>
+                    <h2>CT Thorax-Abdomen-Pelvis (TAP)</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Indication</h3>
+                            <ul>
+                                <li><strong>Systemic staging</strong></li>
+                                <li>Detect metastases:
+                                    <ul>
+                                        <li>Liver</li>
+                                        <li>Lung</li>
+                                        <li>Peritoneum</li>
+                                        <li>Other organs</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Additional Imaging</h3>
+                            <ul>
+                                <li><strong>PET-CT:</strong> selective use
+                                    <ul>
+                                        <li>Indeterminate liver lesions</li>
+                                        <li>Recurrence assessment</li>
+                                        <li>Not routine staging</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="highlight-box">
+                                Contrast-enhanced CT chest or dedicated chest CT for lung metastasis detection
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 17: ERUS -->
+                <section>
+                    <h2>Endorectal Ultrasound (ERUS)</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Best Use</h3>
+                            <ul>
+                                <li><strong>Early tumors:</strong> T1–T2</li>
+                                <li>High accuracy for T staging (operator-dependent)</li>
+                                <li>Real-time assessment</li>
+                                <li>Guides local excision decisions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Limitations</h3>
+                            <ul>
+                                <li>Advanced/stenosing lesions</li>
+                                <li>Upper rectal tumors</li>
+                                <li>Less reliable for nodal assessment</li>
+                                <li>Operator-dependent</li>
+                            </ul>
+                            <div class="clinical-pearl">
+                                ERUS complements MRI for early disease; MRI superior for advanced tumors
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 18: TNM Classification -->
+                <section>
+                    <h2>TNM Classification (8th Edition)</h2>
+                    <table style="font-size: 0.65em;">
+                        <tr>
+                            <th>T Stage</th>
+                            <th>Definition</th>
+                        </tr>
+                        <tr><td><strong>Tis</strong></td><td>Carcinoma in situ (intramucosal)</td></tr>
+                        <tr><td><strong>T1</strong></td><td>Invades submucosa</td></tr>
+                        <tr><td><strong>T2</strong></td><td>Invades muscularis propria</td></tr>
+                        <tr><td><strong>T3</strong></td><td>Invades through muscularis into perirectal tissue (subclassify by mm: a &lt;1mm, b 1-5mm, c 5-15mm, d &gt;15mm)</td></tr>
+                        <tr><td><strong>T4a</strong></td><td>Penetrates visceral peritoneum</td></tr>
+                        <tr><td><strong>T4b</strong></td><td>Invades other organs/structures</td></tr>
+                    </table>
+                    <div class="two-column" style="margin-top: 0.5em;">
+                        <div>
+                            <table style="font-size: 0.65em;">
+                                <tr><th>N Stage</th><th>Definition</th></tr>
+                                <tr><td><strong>N0</strong></td><td>No regional nodes</td></tr>
+                                <tr><td><strong>N1</strong></td><td>1–3 nodes</td></tr>
+                                <tr><td><strong>N2</strong></td><td>≥4 nodes</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="font-size: 0.65em;">
+                                <tr><th>M Stage</th><th>Definition</th></tr>
+                                <tr><td><strong>M0</strong></td><td>No distant mets</td></tr>
+                                <tr><td><strong>M1a</strong></td><td>1 organ/site</td></tr>
+                                <tr><td><strong>M1b</strong></td><td>≥2 organs/sites</td></tr>
+                                <tr><td><strong>M1c</strong></td><td>Peritoneal mets</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION F: Staging -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section F</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Staging & Extension Assessment</h2>
+                </section>
+
+                <!-- Slide 19: Imaging to Staging -->
+                <section>
+                    <h2>Putting Imaging into Staging</h2>
+                    <div class="key-concept">
+                        MRI + CT TAP + Colonoscopy = Complete Staging
+                    </div>
+                    <div class="two-column">
+                        <div>
+                            <h3>MRI: Local Staging</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>T stage</strong> accuracy ~85–90%</li>
+                                <li><strong>N stage</strong> accuracy ~70–75%</li>
+                                <li><strong>CRM:</strong> most critical
+                                    <ul><li>≤1 mm = positive</li>
+                                    <li>Major predictor of local recurrence</li></ul>
+                                </li>
+                                <li><strong>EMVI:</strong> higher systemic spread risk</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Management-Changing Factors</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li>CRM ≤1 mm → <strong>neoadjuvant therapy</strong></li>
+                                <li>EMVI positive → <strong>aggressive approach</strong></li>
+                                <li>T3c/d or T4 → <strong>neoadjuvant therapy</strong></li>
+                                <li>N+ → <strong>neoadjuvant therapy</strong></li>
+                                <li>Lateral nodes &gt;7mm → <strong>consider LPND</strong></li>
+                                <li>Low tumor close to sphincter → <strong>neoadjuvant to preserve</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 20: Staging to Management -->
+                <section>
+                    <h2>Staging-to-Management Mapping</h2>
+                    <table>
+                        <tr>
+                            <th>Stage</th>
+                            <th>TNM</th>
+                            <th>Primary Approach</th>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-1">I</span></td>
+                            <td>T1–T2, N0, M0</td>
+                            <td>Consider direct surgery (TME or local excision if T1 favorable)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-2">II</span></td>
+                            <td>T3–T4, N0, M0</td>
+                            <td><strong>Neoadjuvant therapy</strong> if threatened CRM/EMVI, then TME</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-3">III</span></td>
+                            <td>Any T, N+, M0</td>
+                            <td><strong>Neoadjuvant CRT/TNT</strong> → TME → adjuvant chemo</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-4">IV</span></td>
+                            <td>Any T, Any N, M1</td>
+                            <td>Systemic therapy ± metastasis-directed therapy ± primary resection</td>
+                        </tr>
+                    </table>
+                    <div class="clinical-pearl" style="margin-top: 1em;">
+                        All cases should be discussed in MDT for individualized planning
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION G: Therapeutic Management -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section G</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Therapeutic Management</h2>
+                </section>
+
+                <!-- Slide 21: MDT -->
+                <section>
+                    <h2>Multidisciplinary Tumor Board (MDT)</h2>
+                    <div class="key-concept">
+                        MDT discussion is MANDATORY for all rectal cancer cases
+                    </div>
+                    <div class="two-column">
+                        <div>
+                            <h3>Core Team</h3>
+                            <ul>
+                                <li>Colorectal surgeon</li>
+                                <li>Medical oncologist</li>
+                                <li>Radiation oncologist</li>
+                                <li>Radiologist</li>
+                                <li>Pathologist</li>
+                                <li>Gastroenterologist</li>
+                                <li>Specialist nurse</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>MDT Role</h3>
+                            <ul>
+                                <li>Review staging imaging</li>
+                                <li>Individualize treatment plan</li>
+                                <li>Decide on:
+                                    <ul>
+                                        <li>Neoadjuvant therapy (type, duration)</li>
+                                        <li>Surgical approach</li>
+                                        <li>Adjuvant therapy</li>
+                                        <li>Surveillance protocol</li>
+                                    </ul>
+                                </li>
+                                <li>Discuss organ preservation options</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 22: Radiotherapy -->
+                <section>
+                    <h2>Radiotherapy</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Indications</h3>
+                            <ul>
+                                <li>T3–T4 tumors</li>
+                                <li>Node-positive disease</li>
+                                <li>Close/threatened CRM</li>
+                                <li>EMVI positive</li>
+                                <li>Sphincter preservation attempt</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Techniques</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>Short-course RT:</strong>
+                                    <ul>
+                                        <li>5 × 5 Gy (25 Gy total)</li>
+                                        <li>Surgery within 1 week OR delay 6–12 weeks (TNT)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Long-course CRT:</strong>
+                                    <ul>
+                                        <li>45–50.4 Gy in 25–28 fractions</li>
+                                        <li>Concurrent fluoropyrimidine</li>
+                                        <li>Surgery 6–12 weeks later</li>
+                                    </ul>
+                                </li>
+                                <li><strong>IMRT/VMAT:</strong> reduce toxicity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Goals:</strong> Downstage tumor • Improve local control • Increase resectability • Sphincter preservation
+                    </div>
+                </section>
+
+                <!-- Slide 23: Chemotherapy -->
+                <section>
+                    <h2>Chemotherapy Protocols</h2>
+                    <div class="three-column">
+                        <div>
+                            <h3>Concurrent (CRT)</h3>
+                            <ul style="font-size: 0.7em;">
+                                <li><strong>5-FU</strong> continuous infusion</li>
+                                <li><strong>Capecitabine</strong> oral</li>
+                                <li>Radiosensitizer role</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Neoadjuvant (TNT)</h3>
+                            <ul style="font-size: 0.7em;">
+                                <li><strong>FOLFOX</strong> or <strong>CAPOX</strong></li>
+                                <li>Before or after CRT</li>
+                                <li>↑ pCR rates</li>
+                                <li>↑ compliance</li>
+                                <li>Early systemic control</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Adjuvant</h3>
+                            <ul style="font-size: 0.7em;">
+                                <li>Stage II high-risk</li>
+                                <li>Stage III</li>
+                                <li><strong>FOLFOX</strong> or <strong>CAPOX</strong></li>
+                                <li>3–6 months</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="two-column" style="margin-top: 1em;">
+                        <div>
+                            <h3>Metastatic Disease</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>FOLFOX, FOLFIRI, FOLFOXIRI</li>
+                                <li>+ Bevacizumab (anti-VEGF)</li>
+                                <li>+ Cetuximab/panitumumab (anti-EGFR, if RAS wild-type)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>MSI-High Tumors</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li><strong>Immunotherapy:</strong></li>
+                                <li>Pembrolizumab</li>
+                                <li>Nivolumab ± ipilimumab</li>
+                                <li>Superior to chemo in MSI-high metastatic disease</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 24: Surgery -->
+                <section>
+                    <h2>Surgery — Principles & Techniques</h2>
+                    <div class="key-concept">
+                        Total Mesorectal Excision (TME) is the GOLD STANDARD
+                    </div>
+                    <div class="two-column">
+                        <div>
+                            <h3>TME Principles</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li>Sharp dissection in <strong>embryologic plane</strong></li>
+                                <li>Remove mesorectum en bloc</li>
+                                <li>Includes:
+                                    <ul>
+                                        <li>Mesorectal fat</li>
+                                        <li>Lymph nodes</li>
+                                        <li>Intact mesorectal fascia</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Goal:</strong> negative CRM</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Surgical Options</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>Low Anterior Resection (LAR):</strong>
+                                    <ul><li>Sphincter-saving</li>
+                                    <li>Coloanal anastomosis if low</li>
+                                    <li>Consider diverting ileostomy</li></ul>
+                                </li>
+                                <li><strong>Abdominoperineal Resection (APR):</strong>
+                                    <ul><li>When sphincter cannot be preserved</li>
+                                    <li>Permanent colostomy</li></ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Advanced Surgical Techniques</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Local Excision</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>TEM</strong> (Transanal Endoscopic Microsurgery)</li>
+                                <li><strong>TAMIS</strong> (Transanal Minimally Invasive Surgery)</li>
+                                <li><strong>Indications:</strong>
+                                    <ul>
+                                        <li>T1 favorable lesions</li>
+                                        <li>Well/moderate differentiation</li>
+                                        <li>No LVI</li>
+                                        <li>Sm1 invasion (&lt;1000 μm)</li>
+                                        <li>&lt;3 cm size</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Transanal TME (TaTME)</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li>Bottom-up approach</li>
+                                <li>Better distal margin in low tumors</li>
+                                <li>Requires expertise</li>
+                                <li>Selected centers</li>
+                            </ul>
+                            <h3>Lateral Pelvic Node Dissection</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li>Consider if confirmed lateral node mets</li>
+                                <li>Regional practice variation</li>
+                                <li>Common in Japan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 25: Margins -->
+                <section>
+                    <h2>Surgical Margins</h2>
+                    <div class="key-concept">
+                        Negative CRM is the MOST IMPORTANT predictor of local control
+                    </div>
+                    <div class="two-column">
+                        <div>
+                            <h3>Circumferential Resection Margin (CRM)</h3>
+                            <ul>
+                                <li><strong>Positive:</strong> ≤1 mm</li>
+                                <li>Major predictor of:
+                                    <ul>
+                                        <li>Local recurrence</li>
+                                        <li>Distant metastases</li>
+                                        <li>Overall survival</li>
+                                    </ul>
+                                </li>
+                                <li>TME quality determines CRM status</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Distal Margin</h3>
+                            <ul>
+                                <li><strong>Historical:</strong> 2 cm rule</li>
+                                <li><strong>Modern evidence:</strong>
+                                    <ul>
+                                        <li>≤1 cm acceptable with good TME</li>
+                                        <li>Even millimetric margins safe after preop CRT</li>
+                                    </ul>
+                                </li>
+                                <li>Intramural spread limited after CRT</li>
+                                <li>Enables sphincter preservation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clinical-pearl">
+                        TME quality trumps absolute margin measurements. Good TME with 5mm distal margin beats poor TME with 2cm margin.
+                    </div>
+                </section>
+
+                <!-- Slide 26: Organ Preservation -->
+                <section>
+                    <h2>Organ-Preserving Strategies</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>"Watch-and-Wait"</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>Indication:</strong> complete clinical response (cCR) after neoadjuvant therapy</li>
+                                <li><strong>Selection criteria:</strong>
+                                    <ul>
+                                        <li>No palpable tumor (DRE)</li>
+                                        <li>No visible tumor (endoscopy)</li>
+                                        <li>No residual tumor (MRI)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Surveillance:</strong>
+                                    <ul>
+                                        <li>DRE + endoscopy every 3 months × 2 years</li>
+                                        <li>MRI every 3–6 months × 2 years</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Outcomes & Considerations</h3>
+                            <ul style="font-size: 0.8em;">
+                                <li><strong>Success rate:</strong> 80–90% organ preservation at 3 years</li>
+                                <li><strong>Regrowth:</strong> ~25% by 3 years
+                                    <ul><li>Most salvageable with surgery</li></ul>
+                                </li>
+                                <li><strong>Requires:</strong>
+                                    <ul>
+                                        <li>Motivated, compliant patient</li>
+                                        <li>Experienced center</li>
+                                        <li>Rigorous follow-up</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="clinical-pearl">
+                                Watch-and-wait is NOT standard of care — research protocol or highly selected patients only
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION H: Follow-up -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section H</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Follow-up & Surveillance</h2>
+                </section>
+
+                <!-- Slide 27: Surveillance Principles -->
+                <section>
+                    <h2>Surveillance Principles</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Goals</h3>
+                            <ul>
+                                <li>Detect <strong>local recurrence</strong> early</li>
+                                <li>Detect <strong>metachronous metastases</strong> amenable to curative treatment</li>
+                                <li>Monitor for <strong>metachronous polyps/cancers</strong></li>
+                                <li>Assess functional outcomes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>General Schedule</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li><strong>Years 0–2:</strong>
+                                    <ul>
+                                        <li>Clinic + CEA: q3–6 months</li>
+                                        <li>CT TAP: annually</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Years 3–5:</strong>
+                                    <ul>
+                                        <li>Clinic + CEA: q6 months</li>
+                                        <li>CT TAP: annually</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Colonoscopy:</strong>
+                                    <ul>
+                                        <li>1 year post-surgery</li>
+                                        <li>Then at 3 years</li>
+                                        <li>Then every 5 years if normal</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Proctoscopy or pelvic MRI</strong> for low rectal cancers with anastomosis or organ preservation
+                    </div>
+                </section>
+
+                <!-- Slide 28: Red Flags -->
+                <section>
+                    <h2>Red Flags for Recurrence</h2>
+                    <div class="three-column">
+                        <div>
+                            <h3 style="color: #c0392b;">Laboratory</h3>
+                            <ul>
+                                <li><strong>Rising CEA</strong></li>
+                                <li>New anemia</li>
+                                <li>Abnormal LFTs</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #c0392b;">Clinical</h3>
+                            <ul>
+                                <li>New pelvic pain</li>
+                                <li>Rectal bleeding</li>
+                                <li>Change in bowel habits</li>
+                                <li>Palpable mass</li>
+                                <li>Weight loss</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: #c0392b;">Systemic</h3>
+                            <ul>
+                                <li>Respiratory symptoms</li>
+                                <li>Abdominal pain</li>
+                                <li>Hepatomegaly</li>
+                                <li>Bone pain</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="key-concept" style="margin-top: 1em;">
+                        Most recurrences occur within first 2 years — intensive surveillance during this period
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION I: Prognosis -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section I</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Prognosis</h2>
+                </section>
+
+                <!-- Slide 29: Stage-based Outcomes -->
+                <section>
+                    <h2>Stage-Based Outcomes</h2>
+                    <h3>Approximate 5-Year Overall Survival</h3>
+                    <table>
+                        <tr>
+                            <th>Stage</th>
+                            <th>5-Year OS</th>
+                            <th>Key Prognostic Factors</th>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-1">I</span></td>
+                            <td><strong>85–95%</strong></td>
+                            <td>T1 vs T2, grade</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-2">II</span></td>
+                            <td><strong>60–80%</strong></td>
+                            <td>T3 depth, EMVI, CRM, grade, MSI</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-3">III</span></td>
+                            <td><strong>40–70%</strong></td>
+                            <td>Nodal burden (N1 vs N2), T stage, CRM, EMVI</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-4">IV</span></td>
+                            <td><strong>10–20%</strong></td>
+                            <td>Resectability of mets, molecular profile, response to therapy</td>
+                        </tr>
+                    </table>
+                    <div class="two-column" style="margin-top: 1em;">
+                        <div>
+                            <h3>Favorable Prognostic Factors</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Early T/N stage</li>
+                                <li>Negative CRM</li>
+                                <li>No EMVI</li>
+                                <li>Well/moderate differentiation</li>
+                                <li>MSI-high</li>
+                                <li>pCR after neoadjuvant therapy</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Adverse Prognostic Factors</h3>
+                            <ul style="font-size: 0.75em;">
+                                <li>Positive CRM</li>
+                                <li>EMVI positive</li>
+                                <li>Poor differentiation</li>
+                                <li>High nodal burden (N2)</li>
+                                <li>Mucinous/signet ring histology</li>
+                                <li>BRAF mutation (sporadic MSS)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION J: Take-Home Messages -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section J</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Key Take-Home Messages</h2>
+                </section>
+
+                <!-- Slide 30: Summary -->
+                <section>
+                    <h2>Key Take-Home Messages</h2>
+                    <div class="key-concept">
+                        1. Rectal cancer management requires <strong>MDT planning</strong>
+                    </div>
+                    <div class="key-concept">
+                        2. <strong>MRI</strong> is cornerstone for local staging and operative planning
+                    </div>
+                    <div class="key-concept">
+                        3. <strong>TME with negative CRM</strong> is essential for local control
+                    </div>
+                    <div class="key-concept">
+                        4. <strong>Neoadjuvant therapy</strong> is standard in T3–T4 or N+ disease
+                    </div>
+                    <div class="key-concept">
+                        5. Consider <strong>organ preservation</strong> only in strict protocols with rigorous follow-up
+                    </div>
+                    <div class="key-concept">
+                        6. <strong>Molecular profiling</strong> matters for metastatic disease and immunotherapy
+                    </div>
+                    <div class="key-concept">
+                        7. <strong>Surveillance</strong> with CEA, imaging, and colonoscopy detects treatable recurrences
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION K: Schematics & Algorithms -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section K</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Schematics & Decision Algorithms</h2>
+                </section>
+
+                <!-- Slide 31: Rectum Schematic -->
+                <section>
+                    <h2>Rectal Anatomy Schematic</h2>
+                    <div class="two-column">
+                        <div class="flowchart">
+<pre>
+═══════════════════════════════════════
+        RECTUM ANATOMICAL DIVISIONS
+═══════════════════════════════════════
+
+   Peritoneal reflection (~10-12 cm)
+              ↑
+              │
+   ┌──────────┴──────────┐
+   │   UPPER RECTUM      │  10-15 cm
+   │   • Partly intra-   │  from anal verge
+   │     peritoneal      │
+   └─────────────────────┘
+              │
+   ┌──────────┴──────────┐
+   │   MID RECTUM        │  5-10 cm
+   │   • Extraperitoneal │
+   │   • Most common     │
+   │     tumor location  │
+   └─────────────────────┘
+              │
+   ┌──────────┴──────────┐
+   │   LOWER RECTUM      │  0-5 cm
+   │   • Close to        │
+   │     sphincters      │
+   │   • APR more likely │
+   └─────────────────────┘
+              │
+        Anal verge (0 cm)
+</pre>
+                        </div>
+                        <div class="flowchart">
+<pre style="font-size: 0.6em;">
+═══════════════════════════════════════
+           TME DISSECTION PLANE
+═══════════════════════════════════════
+
+    Skin/Abdominal wall
+         │
+    ════════════════════
+    Pelvic fascia (outer)
+    ════════════════════
+         │
+    ════════════════════  ← TME plane
+    Mesorectal fascia
+    ════════════════════  ← "Holy plane"
+         │
+    ╔══════════════════╗
+    ║  MESORECTUM      ║
+    ║  • Fat           ║
+    ║  • Lymph nodes   ║
+    ║  • Vessels       ║
+    ╚══════════════════╝
+         │
+    ┌─────────────────┐
+    │  Rectal wall    │
+    │  • Tumor here   │
+    └─────────────────┘
+         │
+    ════════════════════
+    Presacral fascia
+    ════════════════════
+         │
+        Sacrum
+
+Sharp dissection between
+mesorectal and pelvic fascia
+= Optimal CRM
+</pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 33: Staging Table -->
+                <section>
+                    <h2>AJCC Stage Grouping</h2>
+                    <table>
+                        <tr>
+                            <th>Stage</th>
+                            <th>T</th>
+                            <th>N</th>
+                            <th>M</th>
+                            <th>5-Year OS</th>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-1">I</span></td>
+                            <td>T1–T2</td>
+                            <td>N0</td>
+                            <td>M0</td>
+                            <td>85–95%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-2">IIA</span></td>
+                            <td>T3</td>
+                            <td>N0</td>
+                            <td>M0</td>
+                            <td rowspan="2">60–80%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-2">IIB</span></td>
+                            <td>T4</td>
+                            <td>N0</td>
+                            <td>M0</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-3">IIIA</span></td>
+                            <td>T1–T2</td>
+                            <td>N1</td>
+                            <td>M0</td>
+                            <td rowspan="3">40–70%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-3">IIIB</span></td>
+                            <td>T3–T4</td>
+                            <td>N1</td>
+                            <td>M0</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-3">IIIC</span></td>
+                            <td>Any T</td>
+                            <td>N2</td>
+                            <td>M0</td>
+                        </tr>
+                        <tr>
+                            <td><span class="stage-badge stage-4">IV</span></td>
+                            <td>Any T</td>
+                            <td>Any N</td>
+                            <td>M1</td>
+                            <td>10–20%</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Slide 34: Treatment Algorithm -->
+                <section>
+                    <h2>Treatment Decision Algorithm</h2>
+                    <div class="flowchart">
+<pre style="font-size: 0.55em; line-height: 1.6;">
+═══════════════════════════════════════════════════════════════════════════════
+                         RECTAL CANCER TREATMENT ALGORITHM
+═══════════════════════════════════════════════════════════════════════════════
+
+                     ┌───────────────────────────┐
+                     │   DIAGNOSED RECTAL CA     │
+                     │   (Biopsy confirmed)      │
+                     └────────────┬──────────────┘
+                                  │
+                     ┌────────────▼──────────────┐
+                     │  STAGING WORKUP:          │
+                     │  • Pelvic MRI             │
+                     │  • CT TAP                 │
+                     │  • Colonoscopy            │
+                     │  • CEA, Labs              │
+                     └────────────┬──────────────┘
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+       ┌──────▼──────┐    ┌──────▼──────┐    ┌──────▼──────┐
+       │ EARLY       │    │ LOCALLY     │    │ METASTATIC  │
+       │ T1-T2, N0   │    │ ADVANCED    │    │ M1          │
+       └──────┬──────┘    │ T3-T4 or N+ │    └──────┬──────┘
+              │           └──────┬──────┘           │
+              │                  │                  │
+       ┌──────▼──────┐    ┌──────▼──────┐    ┌──────▼──────────┐
+       │ T1 favorable│    │ NEOADJUVANT │    │ SYSTEMIC CHEMO  │
+       │ (well diff, │    │ THERAPY     │    │ ± targeted      │
+       │ <3cm, no    │    │ • Long-CRT  │    │ ± immunotherapy │
+       │ LVI)        │    │   OR        │    │   (if MSI-high) │
+       └──────┬──────┘    │ • Short-RT  │    └──────┬──────────┘
+              │           │   + TNT     │           │
+       ┌──────▼──────┐    └──────┬──────┘    ┌──────▼──────────┐
+       │ TEM/TAMIS   │           │           │ REASSESS:       │
+       │ Local       │    ┌──────▼──────┐    │ • Resectable    │
+       │ excision    │    │ RESTAGE     │    │   primary/mets? │
+       └──────┬──────┘    │ (6-12 wks)  │    │ • Conversion?   │
+              │           └──────┬──────┘    └──────┬──────────┘
+              │                  │                  │
+       ┌──────▼──────┐    ┌──────▼──────────────────▼──────────┐
+       │ If high-risk│    │           TME SURGERY               │
+       │ path → TME  │    │  • LAR (sphincter-saving)          │
+       │             │    │  • APR (if sphincter involved)     │
+       └──────┬──────┘    │  • TaTME (selected centers)        │
+              │           │  ± Diverting ileostomy             │
+              │           └──────┬─────────────────────────────┘
+              │                  │
+              │           ┌──────▼──────────┐
+              │           │ PATHOLOGY       │
+              │           │ (ypTNM)         │
+              │           │ • CRM status    │
+              │           │ • TRG (response)│
+              │           └──────┬──────────┘
+              │                  │
+              └──────────────────┼───────────────────┐
+                                 │                   │
+                          ┌──────▼──────┐    ┌──────▼──────────┐
+                          │ ADJUVANT    │    │ SURVEILLANCE    │
+                          │ CHEMO       │    │ • Clinic + CEA  │
+                          │ (Stage III, │───▶│ • CT TAP        │
+                          │ high-risk   │    │ • Colonoscopy   │
+                          │ Stage II)   │    │                 │
+                          └─────────────┘    └─────────────────┘
+</pre>
+                    </div>
+                </section>
+
+                <!-- Slide 35: Treatment Summary -->
+                <section>
+                    <h2>Treatment Summary Table</h2>
+                    <table style="font-size: 0.7em;">
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Preferred Approach</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td><strong>T1 low risk</strong></td>
+                            <td>Local excision (TEM/TAMIS)</td>
+                            <td>Well/moderate diff, no LVI, Sm1, &lt;3 cm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>T1 high risk or T2 N0</strong></td>
+                            <td>TME ± adjuvant chemo</td>
+                            <td>Poor diff, LVI, or deep invasion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>T3/T4 or N+</strong></td>
+                            <td>Neoadjuvant CRT/TNT → TME → adjuvant chemo</td>
+                            <td>Standard multimodal approach</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Threatened/positive CRM</strong></td>
+                            <td>Neoadjuvant therapy to downstage</td>
+                            <td>Essential to achieve negative CRM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Low tumor near sphincter</strong></td>
+                            <td>Neoadjuvant CRT → reassess for LAR vs APR</td>
+                            <td>Attempt sphincter preservation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lateral nodes positive</strong></td>
+                            <td>Consider lateral pelvic node dissection</td>
+                            <td>Regional variation, common in Asia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Complete cCR after CRT</strong></td>
+                            <td>Consider watch-and-wait (selected centers)</td>
+                            <td>Strict selection and surveillance required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Metastatic MSI-high</strong></td>
+                            <td>Immunotherapy (pembrolizumab/nivolumab)</td>
+                            <td>Superior to chemo in MSI-high</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Slide 36: Follow-up Schedule -->
+                <section>
+                    <h2>Follow-up Schedule</h2>
+                    <table style="font-size: 0.75em;">
+                        <tr>
+                            <th>Timeframe</th>
+                            <th>Clinical Visit + CEA</th>
+                            <th>CT TAP</th>
+                            <th>Colonoscopy</th>
+                            <th>Additional</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Years 0–2</strong></td>
+                            <td>Every 3–6 months</td>
+                            <td>Annually</td>
+                            <td>At 1 year</td>
+                            <td>Proctoscopy/MRI for LAR or W&W</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Years 3–5</strong></td>
+                            <td>Every 6 months</td>
+                            <td>Annually</td>
+                            <td>At 3 years</td>
+                            <td>As clinically indicated</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Beyond 5 years</strong></td>
+                            <td>Annual or as indicated</td>
+                            <td>As indicated</td>
+                            <td>Every 5 years if normal</td>
+                            <td>Individualized</td>
+                        </tr>
+                    </table>
+                    <div class="clinical-pearl">
+                        <strong>High-intensity surveillance in Years 0–2:</strong> 80% of recurrences occur in this window
+                    </div>
+                </section>
+            </section>
+
+            <!-- SECTION L: Practical Pearls -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Section L</h1>
+                    <h2 style="color: white; border-bottom-color: white;">Practical Pearls for OR & Clinic</h2>
+                </section>
+
+                <!-- Slide 37: Pearls -->
+                <section>
+                    <h2>Clinical & Surgical Pearls</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Preoperative</h3>
+                            <div class="clinical-pearl">
+                                • <strong>MRI quality matters</strong> — demand dedicated rectal protocol with CRM reporting
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Tattoo tumor location</strong> endoscopically if planning limited resection
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Pre-op stoma counseling</strong> — involve stoma nurse early if APR likely
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Optimize nutrition</strong> — consider supplementation if malnourished
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Intraoperative</h3>
+                            <div class="clinical-pearl">
+                                • <strong>Aim for negative CRM</strong> — avoid piecemeal excision
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Diverting ileostomy</strong> for low coloanal anastomosis (reduces clinical leak)
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Intact TME specimen</strong> — pathologist should assess quality
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-column" style="margin-top: 1em;">
+                        <div>
+                            <h3>Postoperative</h3>
+                            <div class="clinical-pearl">
+                                • <strong>Communicate function outcomes:</strong> LAR syndrome, sexual/urinary dysfunction risk
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Review pathology at MDT</strong> — confirm ypTNM, CRM, adjuvant plan
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Long-term</h3>
+                            <div class="clinical-pearl">
+                                • <strong>Screen for LAR syndrome</strong> — biofeedback and dietary modifications help
+                            </div>
+                            <div class="clinical-pearl">
+                                • <strong>Address QOL issues</strong> — sexual function, body image, psychosocial support
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Closing -->
+            <section>
+                <section data-background-color="#2c3e50">
+                    <h1 style="color: white;">Closing & Q&A</h1>
+                </section>
+
+                <section>
+                    <h2>Key Pillars of Rectal Cancer Management</h2>
+                    <div class="three-column">
+                        <div>
+                            <div style="background: #e74c3c; color: white; padding: 2em 1em; border-radius: 10px; text-align: center; font-size: 1.2em; font-weight: bold;">
+                                MDT<br>Planning
+                            </div>
+                        </div>
+                        <div>
+                            <div style="background: #3498db; color: white; padding: 2em 1em; border-radius: 10px; text-align: center; font-size: 1.2em; font-weight: bold;">
+                                High-Quality<br>MRI
+                            </div>
+                        </div>
+                        <div>
+                            <div style="background: #27ae60; color: white; padding: 2em 1em; border-radius: 10px; text-align: center; font-size: 1.2em; font-weight: bold;">
+                                TME with<br>Negative CRM
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2em;">
+                        <div style="background: #9b59b6; color: white; padding: 1.5em; border-radius: 10px; text-align: center; font-size: 1.1em; font-weight: bold;">
+                            Neoadjuvant Therapy for Locally Advanced Disease
+                        </div>
+                    </div>
+                    <h3 style="margin-top: 2em; text-align: center;">Questions?</h3>
+                </section>
+            </section>
+
+            <!-- Appendix A -->
+            <section>
+                <section data-background-color="#34495e">
+                    <h1 style="color: white;">Appendix A</h1>
+                    <h2 style="color: white;">Rapid Clinical Checklist</h2>
+                </section>
+
+                <section>
+                    <h2>Checklist for Rounding</h2>
+                    <div class="flowchart">
+<pre style="font-size: 0.65em;">
+□ DIAGNOSIS
+  ├─ Biopsy-confirmed adenocarcinoma
+  ├─ Histologic grade documented
+  └─ MSI/MMR status obtained (especially if &lt;50 yo or Lynch concern)
+
+□ STAGING IMAGING COMPLETE
+  ├─ Pelvic MRI with rectal protocol
+  │   ├─ T stage
+  │   ├─ N stage
+  │   ├─ CRM distance (≤1 mm = positive)
+  │   ├─ EMVI status
+  │   └─ Relationship to sphincters/organs
+  ├─ CT TAP (systemic staging)
+  └─ Colonoscopy (synchronous lesions)
+
+□ MDT DISCUSSION
+  ├─ Case presented with imaging
+  ├─ Treatment plan decided:
+  │   ├─ Neoadjuvant therapy (type, duration)
+  │   ├─ Surgical approach (LAR vs APR, TaTME consideration)
+  │   ├─ Adjuvant therapy plan
+  │   └─ Organ preservation consideration
+  └─ Patient counseled on plan
+
+□ PRE-OP OPTIMIZATION (if surgery planned)
+  ├─ Nutrition assessment/supplementation
+  ├─ Smoking cessation
+  ├─ Stoma counseling (if APR or high-risk anastomosis)
+  ├─ Anesthesia clearance
+  └─ VTE prophylaxis plan
+
+□ POST-OP PATHOLOGY REVIEW
+  ├─ ypTNM documented
+  ├─ CRM status (positive ≤1 mm)
+  ├─ Tumor regression grade (TRG) if neoadjuvant Rx
+  ├─ TME quality assessment
+  ├─ Lymph node yield adequate (≥12 nodes)
+  └─ Review at MDT → adjuvant therapy decision
+
+□ ADJUVANT THERAPY PLAN
+  ├─ Indications: Stage III, high-risk Stage II
+  ├─ FOLFOX or CAPOX × 3–6 months
+  └─ Coordination with medical oncology
+
+□ SURVEILLANCE SCHEDULE
+  ├─ Clinic + CEA q3–6 months × 2 years
+  ├─ CT TAP annually × 3–5 years
+  ├─ Colonoscopy at 1, 3 years, then q5 years
+  └─ Proctoscopy/MRI for LAR or W&W patients
+</pre>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Appendix B -->
+            <section>
+                <section data-background-color="#34495e">
+                    <h1 style="color: white;">Appendix B</h1>
+                    <h2 style="color: white;">Suggested Slide Timing</h2>
+                </section>
+
+                <section>
+                    <h2>Timing for 30–40 Minute Talk</h2>
+                    <table>
+                        <tr>
+                            <th>Section</th>
+                            <th>Time (min)</th>
+                            <th>Key Focus</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Introduction & Epidemiology</strong></td>
+                            <td>3</td>
+                            <td>Burden, risk factors</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anatomy</strong></td>
+                            <td>5</td>
+                            <td>Segments, relations, TME plane</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pathophysiology</strong></td>
+                            <td>4</td>
+                            <td>Carcinogenesis, MSI importance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Clinical Presentation & Diagnostics</strong></td>
+                            <td>6</td>
+                            <td>Symptoms, DRE, colonoscopy, imaging</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Staging & Management</strong></td>
+                            <td>10–12</td>
+                            <td>TNM, MRI, neoadjuvant Rx, TME, algorithms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Follow-up & Prognosis</strong></td>
+                            <td>4</td>
+                            <td>Surveillance schedule, stage outcomes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Take-home + Practical Pearls</strong></td>
+                            <td>3</td>
+                            <td>Key concepts, clinical tips</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Q&A</strong></td>
+                            <td>5–10</td>
+                            <td>Audience interaction</td>
+                        </tr>
+                    </table>
+                    <div class="clinical-pearl" style="margin-top: 1em;">
+                        <strong>Tip:</strong> Adjust timing based on audience engagement. Skip appendices in main talk; use for reference.
+                    </div>
+                </section>
+            </section>
+
+            <!-- Thank You -->
+            <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1 style="color: white; font-size: 3em;">Thank You</h1>
+                <p style="color: white; font-size: 1.2em; margin-top: 2em;">
+                    Questions & Discussion
+                </p>
+                <div style="margin-top: 3em; font-size: 0.8em; color: white;">
+                    <p><strong>References:</strong></p>
+                    <p>NCCN Guidelines • ESMO Clinical Practice Guidelines</p>
+                    <p>Key trials: MERCURY, RAPIDO, OPRA, PRODIGE-23</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="controls-hint">
+        Use arrow keys or click to navigate • Press F for fullscreen • Press S for speaker notes
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/3d-models.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            controls: true,
+            progress: true,
+            center: true,
+            overview: true,
+            touch: true,
+            keyboard: true,
+            mouseWheel: false
+        });
+    </script>
+</body>
+</html>
